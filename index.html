@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>organised chaos.</title>
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/common.css" rel="stylesheet" type="text/css" />
+	<link href="css/master.css" rel="stylesheet" type="text/css" />
+	<!-- Menu Resource style -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- JQUERY -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/111469cfcb.js" crossorigin="anonymous"></script>
+		<!-- Blotter.js CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js" charset="utf-8"></script>
+	<!-- Underscore.js CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" charset="utf-8"></script>
+	<!-- Modernizr -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/RGBTextEffect.js" charset="utf-8"></script>
+	<!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+	<header class="cd-header">
+		<div class="cd-logo"><a href="index.html"><img src="assets/logos/logo.png" style="height:60px;width:auto;" alt="Logo"></a></div>
+
+
+		<a class="cd-primary-nav-trigger" href="#0">
+			<span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span>
+		</a> <!-- cd-primary-nav-trigger -->
+	</header>
+
+	<ul class="cd-primary-nav">
+		<nav>
+
+			<div class="nav-pages">
+				<a href="index.html" class="hover-this"><span class="span-hover">
+						<h6>01</h6>Home
+					</span></a>
+				<a href="about.html" class="hover-this"><span class="span-hover">
+						<h6>02</h6>About Us
+					</span></a>
+				<a href="projects.html" class="hover-this"><span class="span-hover">
+						<h6>03</h6>Our Projects
+					</span></a>
+				<a href="contact.html" class="hover-this"><span class="span-hover">
+						<h6>04</h6>Contact
+					</span></a>
+				<div class="cursor"></div>
+			</div>
+
+
+			<div class="nav-contact">
+<h6 class="allcaps">Contact</h6>
+<h6>hello@organisedchaos.com</h6>
+<h6>+64&emsp;22&ensp;173&ensp;4267</h6>
+			</div>
+
+
+		</nav>
+	</ul>
+
+
+
+
+	<main class="app">
+
+		<div class="grid">
+
+			<div class="grid-items">
+			<div class="divider"></div>	<a aria-label="link-1" target="_blank" rel="noopener" draggable="false" class="link w-inline-block">
+					<h1 class="h1">Organised Chaos</h1>
+					<div class="text">a small collective innovating ways we interact with sound</div>
+					<img class="content__img" src="assets/img1.jpg" alt="img1" />
+				</a>
+				<div class="divider"></div>
+
+			</div>
+
+			</div>
+
+		</div>
+
+	</main>
+
+
+
+	<div class="social-icons">
+		<i class="fab fa-instagram fa-2x"><a href="https://instagram.com"></a></i>
+		<i class="fab fa-twitter fa-2x"></i>
+		<i class="fab fa-facebook-square fa-2x"></i>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- scripts -->
+
+	<!-- Menu Navigaion Script -->
+	<script src="js/main.js"></script>
+	<!-- THREE.js Resource File -->
+	<script src="js/three.min.js"></script>
+	<script src="js/TweenLite.min.js"></script>
+	<script src="js/Math.js"></script>
+	<script src="js/EffectShell.js"></script>
+	<script src="js/RGBShiftEffect.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script>
+		const container = document.body
+		const itemsWrapper = document.querySelector('.grid')
+
+		// Preload images
+		const preloadImages = () => {
+			return new Promise((resolve, reject) => {
+				imagesLoaded(document.querySelectorAll('img'), resolve);
+			});
+		};
+		// And then..
+		preloadImages().then(() => {
+			// Remove the loader
+			document.body.classList.remove('loading');
+			const effect = new RGBShiftEffect(container, itemsWrapper, {
+				strength: 0.25
+			})
+		});
+	</script>
+
+
+
+</body>
+
+</html>
